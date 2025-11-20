@@ -10,7 +10,16 @@ int d = a * a - 4 * (a * c);
 Console.WriteLine("Дискримінант = {0}", d);
 if (d > 0)
 {
-    double x1 = (-b - Math.Sqrt(d)) / 2 * a;
-    double x2 = (-b + Math.Sqrt(d)) / 2 * a;
+    double x1 = (-b + Math.Sqrt(d)) / (2 * a);
+    double x2 = (-b - Math.Sqrt(d)) / (2 * a);
     Console.WriteLine("Результат х1 = {0}, x2 = {1}", x1, x2);
+}
+if (d == 0)
+{
+    double x = -b / (2 * a);
+    Console.WriteLine("Результат х1 = {0}", x);
+}
+if (d < 0)
+{
+    Console.WriteLine("Рішень для даного квадратного рівняння немає");
 }
