@@ -1,32 +1,27 @@
 ﻿Console.InputEncoding = System.Text.Encoding.UTF8;
 Console.OutputEncoding = System.Text.Encoding.UTF8;
+
 Console.Write("Введіть натуральне число n: ");
 int n = int.Parse(Console.ReadLine());
-double sum = 0;
-int k = 1;
-while (k <= n)
+double sumA = 0;
+for (int k = 1; k <= n; k++)
 {
-    double a = Math.Pow(-1, k) / (2 * k + 1);
-    sum += a;
-    k++;
+    sumA += Math.Pow(-1, k) / (2 * k + 1);
 }
-Console.WriteLine("a = {0}", sum);
-double sum2 = 0;
-int kc = 1;
-while (kc <= n)
+Console.WriteLine("a = {0}", sumA);
+double sumB = 0;
+for (int k = 1; k <= n; k++)
 {
-    double b = (1 + 1/Math.Pow(kc, 2));
-    sum2 += b;
-    kc++;
+    sumB += (1 + 1.0 / Math.Pow(k, 2));
 }
-Console.WriteLine("b = {0}", sum2);
+Console.WriteLine("b = {0}", sumB);
+
+
+double sumC = 0;
 int f = 1;
-double sum3 = 0;
-int ke = 1;
-while (ke <= n)
+for (int k = 1; k <= n; k++)
 {
-   f = f * ke;
-   sum3 += f;
-   ke++;
+    f = f * k;
+    sumC += f;
 }
-Console.WriteLine("c = {0}", sum3);
+Console.WriteLine("c = {0}", sumC);
